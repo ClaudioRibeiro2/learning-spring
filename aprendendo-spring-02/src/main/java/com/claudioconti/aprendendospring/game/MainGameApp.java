@@ -14,11 +14,11 @@ import java.util.Arrays;
 @ComponentScan("com.claudioconti.aprendendospring.game")
 public class MainGameApp {
     public static void main(String[] args){
-        // Instancia uma aplicação Spring Container.
+        // Instancia uma aplicação Spring Container = ctx.
         ApplicationContext ctx = new AnnotationConfigApplicationContext(MainGameApp.class);
         // getBean() pega o objeto instanciado no Spring Container
         ctx.getBean(GameRunner.class).iniciar();
-        // Imprime todos os Beans que foram instanciados pelo Spring Container
+        // Imprime todos os Beans que foram instanciados pelo Spring Container ctx
         Arrays.stream(ctx.getBeanDefinitionNames()).forEach(System.out::println);
     } // Fim do método main
 }

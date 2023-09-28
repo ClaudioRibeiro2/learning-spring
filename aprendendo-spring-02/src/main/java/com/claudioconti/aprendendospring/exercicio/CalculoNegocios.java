@@ -1,19 +1,19 @@
 package com.claudioconti.aprendendospring.exercicio;
 
-import com.claudioconti.aprendendospring.game.Super;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
+// É quando você define que está classe vai ser um Spring Bean e vai ser gerenciada pelo Spring container
 @Component
 public class CalculoNegocios {
     // Atributos
     private ServicoDado dado;
     // Construtor
-    public CalculoNegocios(@Qualifier("MySQL") ServicoDado dado) {
+    public CalculoNegocios(@Qualifier("MySQL") ServicoDado a) {
         super();
-        this.dado = dado;
+        this.dado = a;
     }
     // Métodos
     public int acharMax(){

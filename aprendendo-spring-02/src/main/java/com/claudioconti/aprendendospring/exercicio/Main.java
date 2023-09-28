@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Arrays;
 
-
+// É a anotação que define onde os Beans vão ser declarados
 @Configuration
+// Escaneia o pacote (package) por Beans como o @Component
 @ComponentScan
 public class Main {
     public static void main (String[] args){

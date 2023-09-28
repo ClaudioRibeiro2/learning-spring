@@ -16,10 +16,10 @@ class Empresa {
     Depedencia2 depedencia2;
 
     @Autowired
-    public Empresa(Depedencia1 depedencia1, Depedencia2 depedencia2) {
+    public Empresa(Depedencia1 a, Depedencia2 b) {
         System.out.println("Construtor Injection");
-        this.depedencia1 = depedencia1;
-        this.depedencia2 = depedencia2;
+        this.depedencia1 = a;
+        this.depedencia2 = b;
     }
 
     @Override
