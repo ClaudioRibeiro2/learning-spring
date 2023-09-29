@@ -1,9 +1,10 @@
 package com.claudioconti.aprendendospring.exercicio;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+//@Component
+@Repository
 @Qualifier("MySQL")
 public class MySQLServicoDado implements ServicoDado {
     @Override

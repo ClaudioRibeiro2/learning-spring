@@ -1,12 +1,13 @@
 package com.claudioconti.aprendendospring.exercicio;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
 // É quando você define que está classe vai ser um Spring Bean e vai ser gerenciada pelo Spring container
-@Component
+//@Component
+@Service
 public class CalculoNegocios {
     // Atributos
     private ServicoDado dado;

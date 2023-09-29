@@ -1,0 +1,23 @@
+Anotações Spring:
+    - @Configuration: Indica que classe selecionada vai declarar uma ou mais métodos @Bean e que os mesmos vão ser
+      inicializados pelo Spring container
+    - @ComponentScan: Define pacotes (packages) para serem escaneados.
+    - @Bean: Indica que o método inserido será uma Bean que será manejada pelo Spring Container.
+    - @Component: Indica que a classe anotada é um "Componente".
+    - @Service: Especialização de @Component, indicando que a classe tem Regras de Negócios.
+    - @Controller: Especialização de @Component, indicando que a classe é um "Web Controller". Usado para definir
+      controladores na minha aplicação web e o uso de REST API.
+    - @Repository: Especialização de @Component, indicando que a classe é usado para pegar e/ou manipular dados em BD
+    - @Primary: Indica que uma @Bean deve ser a primeira a ser chamada quando várias @Beans são candidatas para
+      'autowire' uma depêndencia
+    - @Qualifier: Usada em um campo e em parâmetro para qualificar qual candidato vai ser escolhido para dar 'autowire'
+    - @Lazy: Indica que uma @Bean vai ser só inicializada quando ele for chamada.
+    - @Scope(PROTOTYPE): Quando é definido, toda vez que você referenciar esta @Bean, vai ser criado uma nova instância.
+    - @PostConstruct: Identifica o método que vai apenas ser executado apos a Injeção de Dependência de uma @Bean.
+    - @PreDestroy: Identifica que o método so vai ser executado um pouco antes de quando a @Bean for excluída.
+
+    - Dependency Injection: Identifica @Beans e suas dependências e liga elas juntos (IOC, Inversion of Control)
+    - Constructor Injection: Dependências são definidas quando criadas junto a @Bean no construtor.
+    - IOC Container: Spring IOC Container é o que maneja as @Beans e seus ciclos de vida.(Usar sempre ApplicationContex)
+    - Beans: É um objeto instanciado que controlado pelo Spring.
+    - Auto-wiring: Processo de ligamento de dependências para um @Bean.

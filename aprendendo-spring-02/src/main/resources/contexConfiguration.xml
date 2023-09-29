@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        <!-- bean definitions here -->
+    <bean id="nome" class="java.lang.String">
+        <constructor-arg value="Claudin"/>
+    </bean>
+    <bean id="idade" class="java.lang.Integer">
+        <constructor-arg value="19"/>
+    </bean>
+    <!--<context:component-scan base-package="com.claudioconti.aprendendospring.game "/>-->
+    <bean name="jogo" class="com.claudioconti.aprendendospring.game.Mario"/>
+    <bean name="gameRunner" class="com.claudioconti.aprendendospring.game.GameRunner">
+        <constructor-arg ref="jogo"/>
+    </bean>
+
+</beans>
