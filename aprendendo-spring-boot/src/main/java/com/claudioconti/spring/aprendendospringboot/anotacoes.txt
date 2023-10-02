@@ -1,0 +1,16 @@
+Qual é o objetivo do Spring Boot?
+Ajudar você a construir uma Aplicação que está pronta para produção (PRODUCTION-READY) de forma rápida, com:
+    - Spring Initializr: Facilita na criação de um projeto.
+    - Spring Boot Starter Projects: Ajuda em definir as dependências de um projeto, monta para você um grupo de dependências
+    e frameworks para um específico recurso (feature), como:
+        - Starter Web: JSON Converter (Bin → Json), Tomcat (Iniciar a aplicação), Wev MVC (Criar REST API).
+        - Starter Test: Unit test...
+        - Starter Data JPA: Conversar com o banco de dados usando JPA.
+        - Starter JDBC: Conversar com o banco de dados usando JDBC.
+    - Spring Boot Auto Configuration: Automaticamente faz a configuração do seu projeto em base das dependências (pom.xml)
+      e nas anotações feitas no projeto, se você quiser você também pode sobrescrever estas autoconfigurações. É feita em umas
+      das dependências do Maven, em um .jar chamado de autoconfigure.
+    - Spring Boot Dev Tools: Faz que quando você altera alguma coisa na aplicação, você não precise reiniciar o servidor.
+    - Logging: É o armazenamento de eventos relevantes que ocorrem em uma aplicação.
+    - Configurações para ambientes diferentes (environments): DEV, QA, Staging, Production, etc.
+    - Spring Boot Actuator: Monitoramento para a sua aplicação, como: Métricas, Memória
