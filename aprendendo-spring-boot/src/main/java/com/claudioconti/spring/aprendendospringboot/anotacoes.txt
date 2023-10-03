@@ -14,3 +14,14 @@ Ajudar você a construir uma Aplicação que está pronta para produção (PRODU
     - Logging: É o armazenamento de eventos relevantes que ocorrem em uma aplicação.
     - Configurações para ambientes diferentes (environments): DEV, QA, Staging, Production, etc.
     - Spring Boot Actuator: Monitoramento para a sua aplicação, como: Métricas, Memória
+
+
+Como implantar sua aplicação?
+    Método WAR Antigo:
+        - Instalar Java.
+        - Instalar um Web/Application Server.
+        - Implanta a aplicação WAR (Web ARchive).
+    Método Servidor Integrado (Embedded Server):
+        - Instalar Java
+        - Iniciar o arquivo JAR
+        - "Make JAR not WAR" (Credit: Josh Long)
