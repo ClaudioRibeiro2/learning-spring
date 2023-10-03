@@ -1,0 +1,11 @@
+Modern Spring Boot:
+Spring JDBC:
+Spring JPA:
+Spring HIBERNATE:
+HIBERNATE vc JPA:
+
+
+insert into livro(id, nome, autor)
+values(1,'Crime e Castigo','Fiódor Dostoiévski');
+
+delete from livro where id=1
