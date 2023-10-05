@@ -1,0 +1,32 @@
+Arquivos Importantes:
+    - WebAppApplication: Onde tem o método main, que inicia toda a aplicação Spring.
+    - Application.properties: É aqui você configura sua aplicação, muitas configurações já vem autoconfiguradas, se você quiser
+      mudar ou adicionar novas configurações para sua aplicação, seria neste arquivo.
+    - pom.xml: É aqui onde você define todas as dependências de sua aplicação.
+WEB APP:
+    - Browser
+    - HTML
+    - CSS
+    - Request
+    - Response
+    - Form
+    - Session
+    - Authentication
+SPRING MVC:
+    - Dispatcher Servlet
+    - View Resolvers
+    - Model
+    - View
+    - Controller:
+    - Validations
+SPRING BOOT:
+    - Starters
+    - Auto Configuration
+FRAMEWORKS/TOOLS
+    - JSP
+    - JSTL
+    - JPA
+    - BOOTSTRAP
+    - SPRING SECURITY
+    - MYSQL
+    - H2
