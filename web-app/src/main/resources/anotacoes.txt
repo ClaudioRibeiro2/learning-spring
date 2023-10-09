@@ -3,30 +3,22 @@ Arquivos Importantes:
     - Application.properties: É aqui você configura sua aplicação, muitas configurações já vem autoconfiguradas, se você quiser
       mudar ou adicionar novas configurações para sua aplicação, seria neste arquivo.
     - pom.xml: É aqui onde você define todas as dependências de sua aplicação.
-WEB APP:
-    - Browser
-    - HTML
-    - CSS
-    - Request
-    - Response
-    - Form
-    - Session
-    - Authentication
-SPRING MVC:
-    - Dispatcher Servlet
-    - View Resolvers
-    - Model
-    - View
-    - Controller:
-    - Validations
-SPRING BOOT:
-    - Starters
-    - Auto Configuration
-FRAMEWORKS/TOOLS
-    - JSP
-    - JSTL
-    - JPA
-    - BOOTSTRAP
-    - SPRING SECURITY
-    - MYSQL
-    - H2
+Anotações:
+    - Level's of Logging: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, or OFF
+    - RequestMapping
+    - RequestParam: Valor do url para o controller
+    - ResponseBody
+    - Model: Passar o valor de uma página url para um arquivo .jsp, .html, ...
+    - ModelMap:
+    - Logging:
+
+Digita localhost:8080/login
+B1: Identifica o se existe algum método com esse nome.
+/login → LoginController.loginPage()
+B2: Executa o Método que está no Controller
+ - Coloca dados no model
+ - Retornar o nome do view → login
+B3: Identifica o View correto, usando as configurações feitas no application.properties, como suffix e prefix.
+ - login → /WEB-INF/jsp/ login .jsp
+B4: Executa o View
+ - login.jsp

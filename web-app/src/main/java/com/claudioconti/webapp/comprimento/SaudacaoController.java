@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller // Classe que controla Web Requests
 public class SaudacaoController {
-    // url= comprimento → "Olá, seja muito bem-vindo à Aplicação"
     // Atributos - final só pode ser atribuído uma vez.
     private final String saudacao = "Olá seja muito bem-vindo a minha humilde Aplicação.";
     // Métodos
     @RequestMapping("saudar") // Mapeia este url para que toda vez que for invocado, será retornado este método.
-    @ResponseBody // Esta anotação transforma um método java em um retorno adequado para ir para a web, como um JSON ou XML.
+    @ResponseBody // Esta anotação transforma um método java, em um retorno adequado para ir para a web, como um JSON ou XML.
     public String saudar(){
         return saudacao;
     }
@@ -30,5 +29,9 @@ public class SaudacaoController {
         sb.append("</html>");
 
         return sb.toString();
+    }
+    @RequestMapping("sussurro")
+    public String sussurrar(){
+        return "sussurro";
     }
 } // Fim da classe SaudacaoController
