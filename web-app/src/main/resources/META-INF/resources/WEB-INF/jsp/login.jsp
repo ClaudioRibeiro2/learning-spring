@@ -3,8 +3,13 @@
         <title>Pagina de Login</title>
     </head>
     <body>
-        <h1>Nome de Usuario:</h1><input>
-        <h1>Senha</h1><input>
-        <h1>Bem-vindo, ${nome}!</h1>
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <form method="post">
+            Nome: <input type="text" name="nome">
+            Senha: <input type="password" name="senha">
+            <input type="submit">
+        </form>
+    </div>
     </body>
 </html>

@@ -1,23 +1,37 @@
 package com.claudioconti.webapp.login;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import java.util.Locale;
-
-@Controller
+@Controller // Classe que controla os web requests
+@SessionAttributes("nome")
 public class LoginController {
     // Atributos
-    private Logger registrador = LoggerFactory.getLogger(getClass());
+    private AutenticacaoService autenticacaoService;
+    // Construtor
+    public LoginController(AutenticacaoService autenticacaoService) {
+        super();
+        this.autenticacaoService = autenticacaoService;
+    }
 
-    @RequestMapping("login")
-    public String loginPage(@RequestParam String nome, ModelMap modelo){
-        modelo.put("nome", nome);
-        //registrador.debug("Request param é {}, vai ser imprimido em DEBUG level.", nome);
+    // Métodos
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String loginPage(){
+        return "login";
+    }
+
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public String gotoWelcomePage(@RequestParam String nome, @RequestParam String senha, ModelMap model){
+        if(autenticacaoService.validar(nome, senha)){
+            model.put("nome", nome);
+            model.put("senha", senha);
+
+            return "bemvindo";
+        }
         return "login";
     }
 } // Fim da classe LoginController

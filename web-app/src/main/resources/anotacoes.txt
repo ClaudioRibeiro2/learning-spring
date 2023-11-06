@@ -22,3 +22,9 @@ B3: Identifica o View correto, usando as configurações feitas no application.p
  - login → /WEB-INF/jsp/ login .jsp
 B4: Executa o View
  - login.jsp
+
+JSTL -
+
+
+Static é um modificador que quando invocado, faz que o método ou atributo possam ser utilizado sem que o
+objeto seja instaciando.
