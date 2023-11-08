@@ -1,11 +1,14 @@
 package com.claudioconti.webapp.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class Todo {
     // Atributos
     private int id;
     private String usuario;
+    @Size(min = 10, message = "Por favor, adiciona pelo menos 10 caracteres.")
     private String descricao;
     private LocalDate dataFinal;
     private boolean feito;

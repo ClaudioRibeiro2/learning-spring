@@ -2,11 +2,11 @@
 <html>
 <head>
     <link href="webjars\bootstrap\5.1.3\css\bootstrap.min.css" rel="stylesheet">
-    <title>Lista de Todo's</title>
+    <title>Lista de Tarefas</title>
 </head>
 <body>
 <div class="container">
-    <div>Lista de Afazeres:</div>
+    <div>Lista de Tarefas:</div>
     <table class="table">
         <thead>
         <tr>
@@ -14,19 +14,24 @@
             <th>Descricao</th>
             <th>Data para finalizar</th>
             <th>Feito?</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${todos}" var="todo">
+        <c:forEach items="${tarefas}" var="tarefa">
             <tr>
-                <td>${todo.id}</td>
-                <td>${todo.descricao}</td>
-                <td>${todo.dataFinal}</td>
-                <td>${todo.feito}</td>
+                <td>${tarefa.id}</td>
+                <td>${tarefa.descricao}</td>
+                <td>${tarefa.dataFinal}</td>
+                <td>${tarefa.feito}</td>
+                <td><a href="apagar-tarefa?id=${tarefa.id}" class="btn btn-danger">EXPURGAR</a></td>
+                <td><a href="atualizar-tarefa?id=${tarefa.id}" class="btn btn-success">EDITAR</a></td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
+    <a href="criar-tarefa" class="btn btn-success">Criar uma tarefa.</a>
 </div>
 <script src="webjars\bootstrap\5.1.3\js\bootstrap.min.js"></script>
 <script src="webjars\jquery\3.6.0\jquery.min.js"></script>
