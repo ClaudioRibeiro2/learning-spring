@@ -46,7 +46,7 @@ public class TodoController {
         }
         String usuario = (String) model.get("name");
         todoService.criarTarefa(usuario, tarefa.getDescricao(),
-                                LocalDate.now().plusYears(1), false );
+                                tarefa.getDataFinal(), false );
         return "redirect:list-todos";
     }
 
